@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainConstrain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/textViewSearchCountry"
+        android:layout_width="@dimen/margin_min"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_x"
+        android:layout_marginTop="@dimen/margin_x"
+        android:autofillHints="no"
+        android:hint="@string/country"
+        android:inputType="textPersonName"
+        android:minHeight="@dimen/search_string_size"
+        app:layout_constraintEnd_toStartOf="@+id/buttonFindCountry"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonFindCountry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_x"
+        android:layout_marginEnd="@dimen/margin_x"
+        android:text="@string/search_button_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/searchConstraint"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_min"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewSearchCountry">
+
+        <TextView
+            android:id="@+id/textViewMessageInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/country_name"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageViewSearchImage"
+            android:layout_width="@dimen/image_message_size"
+            android:layout_height="@dimen/image_message_size"
+            android:contentDescription="@string/find_error_image"
+            app:layout_constraintBottom_toTopOf="@+id/textViewMessageInput"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/ic_baseline_search_24"
+            tools:srcCompat="@drawable/ic_baseline_search_24" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/secondConstraint"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_min"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewSearchCountry">
+
+        <ImageView
+            android:id="@+id/imageViewCountryFlag"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/image_message_size"
+            android:layout_marginStart="@dimen/margin_x"
+            android:layout_marginTop="@dimen/margin_x"
+            android:adjustViewBounds="true"
+            android:background="@color/black"
+            android:contentDescription="@string/country_flag_image"
+            android:padding="@dimen/margin_padding_flag"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/textViewCountryName"
+            android:layout_width="@dimen/margin_min"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_x"
+            android:layout_marginTop="@dimen/margin_x"
+            android:textSize="@dimen/text_size_country_name"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageViewCountryFlag"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewCapitalLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_x"
+            android:layout_marginTop="@dimen/margin_x"
+            android:text="@string/capital_label"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/imageViewCountryFlag"
+            app:layout_constraintTop_toBottomOf="@+id/textViewCountryName" />
+
+        <TextView
+            android:id="@+id/textViewCapital"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_x"
+            app:layout_constraintStart_toEndOf="@+id/textViewCapitalLabel"
+            app:layout_constraintTop_toTopOf="@+id/textViewCapitalLabel" />
+
+        <TextView
+            android:id="@+id/textViewPopulationLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_x"
+            android:text="@string/population_label"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/imageViewCountryFlag"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewCountryFlag" />
+
+        <TextView
+            android:id="@+id/textViewPopulation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_x"
+            android:layout_marginTop="@dimen/margin_x"
+            app:layout_constraintStart_toEndOf="@+id/textViewPopulationLabel"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewCountryFlag" />
+
+        <TextView
+            android:id="@+id/textViewAreaLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_x"
+            android:text="@string/area_label"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/textViewPopulationLabel"
+            app:layout_constraintTop_toBottomOf="@+id/textViewPopulationLabel" />
+
+        <TextView
+            android:id="@+id/textViewArea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_x"
+            android:layout_marginTop="@dimen/margin_x"
+            app:layout_constraintStart_toEndOf="@+id/textViewAreaLabel"
+            app:layout_constraintTop_toBottomOf="@+id/textViewPopulation" />
+
+        <TextView
+            android:id="@+id/textViewLanguagesLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_x"
+            android:text="@string/languages_label"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/textViewAreaLabel"
+            app:layout_constraintTop_toBottomOf="@+id/textViewAreaLabel" />
+
+        <TextView
+            android:id="@+id/textViewLanguages"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_x"
+            android:layout_marginTop="@dimen/margin_x"
+            app:layout_constraintStart_toEndOf="@+id/textViewLanguagesLabel"
+            app:layout_constraintTop_toBottomOf="@+id/textViewArea" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

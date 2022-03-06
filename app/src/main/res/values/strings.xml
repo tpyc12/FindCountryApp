@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">FindCountryApp</string>
+    <string name="country_flag_image">Флаг страны</string>
+    <string name="country">Страна</string>
+    <string name="search_button_text">Поиск</string>
+    <string name="country_name">Введите название страны</string>
+    <string name="find_error_image">Поиск/ошибка картинка</string>
+    <string name="capital_label">Столица:</string>
+    <string name="population_label">Население:</string>
+    <string name="area_label">Площадь:</string>
+    <string name="languages_label">Языки:</string>
+</resources>

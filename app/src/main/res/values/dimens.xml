@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_x">8dp</dimen>
+    <dimen name="search_string_size">48dp</dimen>
+    <dimen name="margin_min">0dp</dimen>
+    <dimen name="image_message_size">100dp</dimen>
+    <dimen name="margin_padding_flag">1dp</dimen>
+    <dimen name="text_size_country_name">24sp</dimen>
+</resources>
